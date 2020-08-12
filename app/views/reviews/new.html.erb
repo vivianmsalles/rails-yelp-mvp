@@ -1,0 +1,10 @@
+<h1>Create a review for <%= @restaurant.name %></h1>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.label :rating %>
+  <%= select :f, :rating, [0, 1, 2, 3, 4, 5] %>
+  <%= f.submit %>
+<% end %>
+
